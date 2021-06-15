@@ -1,0 +1,16 @@
+{%  extends "bootstrap/base.html" %}
+{% block title %}Flask Example{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Hello, This is inside a contain block</h1>
+  <p>flask bootstrap</p>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('.static', filename='myscripts.js')}}"></script>
+{{super()}}
+{% endblock %}
